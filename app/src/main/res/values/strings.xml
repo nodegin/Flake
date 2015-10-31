@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Flake</string>
+    <string name="msg_already_service_running">Flake already running</string>
+</resources>

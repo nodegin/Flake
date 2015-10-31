@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="x.nodegin.flake">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application android:name=".Flake"
+                 android:allowBackup="true"
+                 android:fullBackupContent="true"
+                 android:label="@string/app_name"
+                 android:icon="@drawable/flake4"
+                 android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.InstantiateActivity"
+            android:launchMode="singleInstance"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:clearTaskOnLaunch="true"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.FlakeService"
+            android:stopWithTask="false"
+            android:exported="false"/>
+
+    </application>
+
+</manifest>
